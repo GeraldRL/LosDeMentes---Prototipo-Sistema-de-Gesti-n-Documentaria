@@ -1,0 +1,18 @@
+.content
+  h1.title Formulario
+  .form
+    form(action="").form-container
+      .form-item.col-5
+        input(type="text" required)#name.input
+        label(for="name").label nombre
+      .form-item.col-5
+        input(type="text" required)#lastname.input
+        label(for="lastname").label apellido
+      .form-item
+        input(type="email" required)#email.input
+        label(for="email").label correo
+      .form-item
+        textarea(required)#textarea.textarea
+        label(for="textarea").label mensaje
+      .form-item
+        input(type="submit" value="Enviar").btn-enviar

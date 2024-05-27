@@ -2,104 +2,145 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Vue Navigation Drawer</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'><link rel="stylesheet" href="./style.css">
+  <title>CodePen - Animated Navbar Boostrap 5.2.1</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css'><link rel="stylesheet" href="../Css/nabvar.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<template id="vuenavbar">
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" 
-            type="button" 
-            data-toggle="collapse"
-            data-target="#navbarContent" 
-            aria-controls="navbarSupportedContent" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="brand-icon hidden-md-down" v-on:click="toggleNavDrawer">
-      <i class="ion-social-codepen-outline"></i>
-    </a>
-    <a class="navbar-brand">Brand</a>
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <form class="form-inline my-2 my-lg-0 ml-auto">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-orange my-2 my-sm-0" type="submit"><i class="ion-search"></i> Search</button>
-      </form>
-      <ul class="nav hidden-sm-up">
-        <li class="nav-item active">
-          <a class="nav-link"><i class="ion-clipboard"></i> Charts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"> <i class="ion-map"></i> Location</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"> <i class="ion-ios-settings-strong"></i> Settings</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</template>
+<div class="container">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">COPESCO</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse menubar"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item active">
+                <a
+                  class="nav-link d-flex align-items-center flex-column"
+                  href="#home"
+                >
+                  <span class="thumb"
+                    ><ion-icon name="home-outline"></ion-icon
+                  ></span>
+                  <span class="menuteks">Home</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link d-flex align-items-center flex-column"
+                  href="#profile"
+                >
+                  <span class="thumb"
+                    ><ion-icon name="people-outline"></ion-icon
+                  ></span>
+                  <span class="menuteks">Profile</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link d-flex align-items-center flex-column"
+                  href="../index.php"
+                >
+                  <span class="thumb"
+                    ><ion-icon name="people-circle-outline"></ion-icon
+                  ></span>
+                  <span class="menuteks">Team</span>
+                </a>
+              </li>
 
-<template id="navdrawer">
-  <div id="navdrawer-container" v-bind:class="open ? 'nav-open' : 'nav-closed'">
-    <transition name="left-nav">
-      <div id="vue-navdrawer" v-show="open" class="hidden-md-down">
-        <slot name="drawer-content"></slot>
-       </div>
-    </transition>
-    <div id="vue-navcontent">
-      <slot name="main-content"></slot>
-    </div>
-  </div>
-</template>
+              <li class="nav-item">
+                <a
+                  class="nav-link d-flex align-items-center flex-column"
+                  href="#"
+                >
+                  <span class="thumb"
+                    ><ion-icon name="mail-unread-outline"></ion-icon
+                  ></span>
+                  <span class="menuteks">Contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-<div id="example">
-  <vue-navbar></vue-navbar>
-  <nav-drawer v-bind:open="open">
-    <div slot="drawer-content">
-      <ul class="nav flex-column">
-        <li class="nav-item active">
-          <a class="nav-link">
-            <i class="ion-clipboard"></i> Charts
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">
-            <i class="ion-map"></i> Location
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">
-            <i class="ion-ios-settings-strong"></i> Settings
-          </a>
-        </li>
-      </ul>
+      <!-- akhir navbar -->
     </div>
-    <div slot="main-content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col" v-for="item in items">
-            <div class="card">
-              <div class="card-block">
-                <p><i :class="item"></i></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div id="home" padding:0;>
+        <div class="content">
+          <h1 class="title">Agregar Usuario</h1>
+          <div class="form">
+            <form class="form-container" action="../bd/registro.php" method="POST">
+              <div class="form-item col-5">
+                <input class="input" type="text" required="required" id="nombre"/>
+                <label class="label" for="name">nombre</label>
               </div>
-            </div>
+              <div class="form-item col-5">
+                <input class="input" type="text" required="required" id="apellidos"/>
+                <label class="label" for="lastname">apellido</label>
+              </div>
+              <div class="form-item">
+                <input class="input" type="text" required="required" id="nick"/>
+                <label class="label" for="nick">nick</label>
+              </div>
+              <div class="form-item col-5">
+                <input class="input" type="text" required="required" id="tipo"/>
+                <label class="label" for="tipo">tipo</label>
+              </div>
+              <div class="form-item col-5">
+                <input class="input" type="text" required="required" id="area"/>
+                <label class="label" for="tipo">area</label>
+              </div>
+              <div class="form-item">
+                <input class="input" type="email" required="required" id="correo"/>
+                <label class="label" for="tipo">Correo</label>
+              </div>
+              <div class="form-item">
+                <input class="input" type="password" required="required" id="contrasena"/>
+                <label class="label" for="tipo">Contraseña</label>
+              </div>
+              
+              <div class="form-item">
+                <input class="btn-enviar" type="submit" value="Registrar"/>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-  </nav-drawer>
+  </div>
+  
+  <div class="row">
+    <div class="col">
+      <div id="profile" style="background-color: #555; padding:0;">
+        
+      </div>
+    </div>
+  </div>
 </div>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script><script  src="./script.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js'></script>
+<script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+<script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script><script  src="../js/navbar.js"></script>
 
 </body>
 </html>

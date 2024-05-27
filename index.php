@@ -72,7 +72,7 @@
                 formData.append('email', this.email);
                 formData.append('password', this.password);
 
-                fetch('../bd/login.php', {
+                fetch('bd/login.php', {
                     method: 'POST',
                     body: formData
                 })

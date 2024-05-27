@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($result->num_rows > 0) {
         $_SESSION['user'] = $email;
-        echo json_encode(['success' => true, 'message' => 'Inicio de sesión exitoso. Bienvenido, '.$email.'!', 'redirect' => 'Main.php']);
+        echo json_encode(['success' => true, 'message' => 'Inicio de sesión exitoso. Bienvenido, '.$email.'!', 'redirect' => '../LosDeMentes---Prototipo-Sistema-de-Gesti-n-Documentaria/Views/Main.php']);
     } else {
         echo json_encode(['success' => false, 'message' => 'Email o contraseña incorrectos.']);
     }
