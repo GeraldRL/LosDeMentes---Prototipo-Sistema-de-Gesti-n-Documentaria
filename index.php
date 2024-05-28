@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,6 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login | Copesco</title>
+    <link rel="icon" href="Recursos/Vue.js_Logo_2.svg.png" type="image/x-icon">
 </head>
 <body>
 <div id="app">
@@ -36,7 +38,7 @@
 
                             <div class="form-floating">
                                 <input type="text" class="form-control" v-model="email" id="floatingInput" placeholder="name@example.com">
-                                <label for="floatingInput">Correo electronico</label>
+                                <label for="floatingInput">Nick</label>
                             </div>
                             <div class="form-floating">
                                 <input type="password" class="form-control" v-model="password" id="floatingPassword" placeholder="Password">
